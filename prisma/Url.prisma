@@ -1,0 +1,4 @@
+model Url {
+    id String @id @default(cuid())
+    originalUrl String
+}
