@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #07111f, #0f2747);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .card {
+            width: 380px;
+            background: #111b2fcc;
+            padding: 32px;
+            border-radius: 18px;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #4f8cff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #2a3d60;
+            background: #18243d;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: 0;
+            border-radius: 10px;
+            background: #3b82f6;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        a {
+            color: #7db0ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .small {
+            text-align: center;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="logo">
+            Шорти<span>.</span>
+        </div>
+
+        <h1>Регистрация</h1>
+
+        <form>
+            <input type="text" placeholder="Логин">
+
+            <input type="password" placeholder="Пароль">
+            <input type="password" placeholder="Повторите пароль">
+
+            <div id="password-error"></div>
+
+            <button type="submit">
+                Создать аккаунт
+            </button>
+        </form>
+
+        <div class="small">
+            Уже есть аккаунт?
+            <a href="login">Войти</a>
+        </div>
+    </div>
+</body>
+<script src="./scripts/checkPass.js">
+</script>
+</html>
