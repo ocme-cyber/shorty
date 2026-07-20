@@ -1,0 +1,14 @@
+model Url {
+    id String @id @default(cuid())
+    originalUrl String
+    urlCode String @unique
+    clicks Int @default(0)
+
+    userId String
+    user User @relation(fields: [userId], references: [id])
+
+    createdAt DateTime @default(now())   @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at") 
+
+    @@map("urls")
+}
