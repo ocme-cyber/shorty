@@ -79,10 +79,48 @@
             text-align: center;
             margin-top: 16px;
         }
+
+        #alert {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            min-width: 320px;
+            max-width: 600px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: all .3s ease;
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+        }
+
+        #alert.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        #alert.success {
+            background: #22c55e;
+        }
+
+        #alert.error {
+            background: #ef4444;
+        }
+
+        #alert.info {
+            background: #3b82f6;
+        }
     </style>
 </head>
 
 <body>
+    <div id="alert"></div>
     <div class="card">
         <div class="logo">
             Шорти<span>.</span>
@@ -95,7 +133,7 @@
 
             <input type="password" placeholder="Пароль">
 
-            <button type="submit">
+            <button onclick="login()" type="submit">
                 Войти
             </button>
         </form>
@@ -106,5 +144,5 @@
         </div>
     </div>
 </body>
-
+<script src="/user/scripts/loginUser.js"></script>
 </html>

@@ -11,8 +11,8 @@ export interface PrismaClientConstructor {
    * const prisma = new PrismaClient({
    *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
    * })
-   * // Fetch zero or more Users
-   * const users = await prisma.user.findMany()
+   * // Fetch zero or more Urls
+   * const urls = await prisma.url.findMany()
    * ```
    *
    * Read more in our [docs](https://pris.ly/d/client).
@@ -30,8 +30,8 @@ export interface PrismaClientConstructor {
  * const prisma = new PrismaClient({
  *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
  * })
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more Urls
+ * const urls = await prisma.url.findMany()
  * ```
  *
  * Read more in our [docs](https://pris.ly/d/client).
@@ -117,6 +117,28 @@ export interface PrismaClient<in LogOpts extends Prisma.LogLevel = never, in out
     $extends: runtime.Types.Extensions.ExtendsHook<"extends", Prisma.TypeMapCb<OmitOpts>, ExtArgs, runtime.Types.Utils.Call<Prisma.TypeMapCb<OmitOpts>, {
         extArgs: ExtArgs;
     }>>;
+    /**
+ * `prisma.url`: Exposes CRUD operations for the **Url** model.
+  * Example usage:
+  * ```ts
+  * // Fetch zero or more Urls
+  * const urls = await prisma.url.findMany()
+  * ```
+  */
+    get url(): Prisma.UrlDelegate<ExtArgs, {
+        omit: OmitOpts;
+    }>;
+    /**
+     * `prisma.user`: Exposes CRUD operations for the **User** model.
+      * Example usage:
+      * ```ts
+      * // Fetch zero or more Users
+      * const users = await prisma.user.findMany()
+      * ```
+      */
+    get user(): Prisma.UserDelegate<ExtArgs, {
+        omit: OmitOpts;
+    }>;
 }
 export declare function getPrismaClientClass(): PrismaClientConstructor;
 //# sourceMappingURL=class.d.ts.map

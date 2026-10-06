@@ -25,13 +25,44 @@ export declare const JsonNull: import("@prisma/client-runtime-utils").JsonNullCl
  * @see https://www.prisma.io/docs/concepts/components/prisma-client/working-with-fields/working-with-json-fields#filtering-on-a-json-field
  */
 export declare const AnyNull: import("@prisma/client-runtime-utils").AnyNullClass;
-export declare const ModelName: {};
+export declare const ModelName: {
+    readonly Url: 'Url';
+    readonly User: 'User';
+};
 export type ModelName = (typeof ModelName)[keyof typeof ModelName];
 export declare const TransactionIsolationLevel: {
-    readonly ReadUncommitted: "ReadUncommitted";
-    readonly ReadCommitted: "ReadCommitted";
-    readonly RepeatableRead: "RepeatableRead";
-    readonly Serializable: "Serializable";
+    readonly ReadUncommitted: 'ReadUncommitted';
+    readonly ReadCommitted: 'ReadCommitted';
+    readonly RepeatableRead: 'RepeatableRead';
+    readonly Serializable: 'Serializable';
 };
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel];
+export declare const UrlScalarFieldEnum: {
+    readonly id: 'id';
+    readonly originalUrl: 'originalUrl';
+    readonly urlCode: 'urlCode';
+    readonly clicks: 'clicks';
+    readonly userId: 'userId';
+    readonly createdAt: 'createdAt';
+    readonly updatedAt: 'updatedAt';
+};
+export type UrlScalarFieldEnum = (typeof UrlScalarFieldEnum)[keyof typeof UrlScalarFieldEnum];
+export declare const UserScalarFieldEnum: {
+    readonly id: 'id';
+    readonly login: 'login';
+    readonly password: 'password';
+    readonly createdAt: 'createdAt';
+    readonly updatedAt: 'updatedAt';
+};
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum];
+export declare const SortOrder: {
+    readonly asc: 'asc';
+    readonly desc: 'desc';
+};
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
+export declare const QueryMode: {
+    readonly default: 'default';
+    readonly insensitive: 'insensitive';
+};
+export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode];
 //# sourceMappingURL=prismaNamespaceBrowser.d.ts.map
